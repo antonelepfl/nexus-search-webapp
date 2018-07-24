@@ -2,13 +2,19 @@
 import createExtension from '@/tools/component-wrapper';
 
 import testEntityComponents from './test';
+import meModelComponents from './me-model';
+import eModelComponents from './e-model';
 
 const entityComponents = {
   test: testEntityComponents,
+  meModel: meModelComponents,
+  eModel: eModelComponents,
 };
 
 /**
  * Returns an array of extension classes for a particular entity type.
+ *
+ * This function will be called in React when we import the extensions module
  *
  * @param {string} type - Nexus Entity Type
  *
