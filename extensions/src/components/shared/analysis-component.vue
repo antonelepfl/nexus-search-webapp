@@ -3,7 +3,7 @@
   <div>
     <h3>Analysis Component</h3>
     <div
-      v-for="(analysis) in analaysisList"
+      v-for="(analysis) in analysisList"
       :key="analysis.url"
       class="analysis-container"
     >
@@ -11,7 +11,7 @@
         :src="analysis.url"
         class="analysis-img"
       >
-      Author: {{analysis.author}}
+      Author: {{ analysis.author }}
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@
     name: 'test-emoji-extension',
     props: ['entityId'],
     computed: {
-      analaysisList() {
+      analysisList() {
         // TODO replace with real data
         const entityToSearch = this.entityId;
         return mockup[entityToSearch];

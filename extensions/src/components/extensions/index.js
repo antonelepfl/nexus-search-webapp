@@ -1,4 +1,6 @@
-
+/**
+ * Defines the interface between nexus-search-app and extensions
+ */
 import createExtension from '@/tools/component-wrapper';
 
 import testEntityComponents from './test';
@@ -13,8 +15,6 @@ const entityComponents = {
 
 /**
  * Returns an array of extension classes for a particular entity type.
- *
- * This function will be called in React when we import the extensions module
  *
  * @param {string} type - Nexus Entity Type
  *
