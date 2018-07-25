@@ -1,6 +1,6 @@
 
 import createExtension from '@/tools/component-wrapper';
-import { setAuthToken } from '@/services/http';
+import { setToken } from '@/services/http';
 
 import testEntityComponents from './test';
 
@@ -34,12 +34,12 @@ function listAvailableEntityTypes() {
  *
  * @param {string} token - Bearer token (with Bearer string included)
  */
-function setExtensionsAuthToken(token) {
-  setAuthToken(token);
+function setAuthToken(token) {
+  setToken(token);
 }
 
 export default {
   getByEntityType,
   listAvailableEntityTypes,
-  setExtensionsAuthToken,
+  setAuthToken,
 };

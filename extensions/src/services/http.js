@@ -8,11 +8,11 @@ import axios from 'axios';
 
 const http = axios.create();
 
-function setAuthToken(token) {
+function setToken(token) {
   http.defaults.headers.common.Authorization = token;
 }
 
 export {
-  setAuthToken,
+  setToken,
   http,
 };
