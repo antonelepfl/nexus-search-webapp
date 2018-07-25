@@ -1,5 +1,6 @@
 
 import createExtension from '@/tools/component-wrapper';
+import { setAuthToken } from '@/services/http';
 
 import testEntityComponents from './test';
 
@@ -27,7 +28,18 @@ function listAvailableEntityTypes() {
   return Object.keys(entityComponents);
 }
 
+/**
+ *
+ * Set the authorization so all the extensions can interact with protected data.
+ *
+ * @param {string} token - Bearer token (with Bearer string included)
+ */
+function setExtensionsAuthToken(token) {
+  setAuthToken(token);
+}
+
 export default {
   getByEntityType,
   listAvailableEntityTypes,
+  setExtensionsAuthToken,
 };

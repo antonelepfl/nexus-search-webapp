@@ -1,6 +1,5 @@
 
 import Vue from 'vue';
-import { setNexusAuth } from '@/services/http-svc';
 
 /**
  * A node in the DOM tree.
@@ -47,16 +46,6 @@ function createExtension(component) {
       this.component.$destroy();
       this.component.$el.remove();
       this.component = null;
-    }
-
-    /**
-     *
-     * Set the authorization so all the extensions can interact with nexus.
-     *
-     * @param {string} token - Bearer token (with Bearer string included)
-     */
-    static setAuthToken(token) {
-      setNexusAuth(token);
     }
   }
 
