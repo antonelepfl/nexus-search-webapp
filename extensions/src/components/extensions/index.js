@@ -7,11 +7,13 @@ import { setToken } from '@/services/http';
 import testEntityComponents from './test';
 import meModelComponents from './me-model';
 import eModelComponents from './e-model';
+import toolsLauncherComponents from './tools-launcher';
 
 const entityComponents = {
   test: testEntityComponents,
   meModel: meModelComponents,
   eModel: eModelComponents,
+  toolsLauncher: toolsLauncherComponents,
 };
 
 /**
