@@ -97,7 +97,9 @@ async function fetchEntity(idUrl, normConf = {}, changeCb = () => {}) {
  * ```
  */
 function getIdAttribute(id, attribute) {
-  if (idAttributeMap(attribute) === undefined) {
+  if (!id) throw new Error('No id has been provided');
+
+  if (idAttributeMap[attribute] === undefined) {
     throw new Error(`Attribute ${attribute} is not defined in attribute map. Wrong spelling?`);
   }
 
